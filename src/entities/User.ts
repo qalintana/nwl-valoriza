@@ -10,7 +10,7 @@ import { v4 as uuid } from 'uuid';
 @Entity('users')
 class User {
   @PrimaryColumn()
-  id: string;
+  readonly id: string;
 
   @Column()
   name: string;
@@ -22,10 +22,10 @@ class User {
   admin: boolean;
 
   @CreateDateColumn()
-  created_ate: Date;
+  created_at: Date;
 
   @UpdateDateColumn()
-  updated_ate: Date;
+  updated_at: Date;
 
   constructor() {
     if (!this.id) {
