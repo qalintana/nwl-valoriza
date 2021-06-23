@@ -9,6 +9,8 @@ class CreateTagService {
   async execute(name: string) {
     const tagsRepositories = getCustomRepository(TagsRepository);
 
+    console.log(name);
+
     if (!name) {
       throw new Error('incorrect name');
     }

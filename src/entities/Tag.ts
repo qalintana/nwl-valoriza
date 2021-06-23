@@ -8,7 +8,7 @@ import {
 
 import { v4 as uuid } from 'uuid';
 
-@Entity('users')
+@Entity('tags')
 class Tag {
   @PrimaryColumn()
   readonly id: string;
